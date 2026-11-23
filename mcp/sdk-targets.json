@@ -1,0 +1,412 @@
+{
+  "contract_fingerprint": "e3fd4c744ae8933c0e0bd0c21a692897795a14657e577fb82108500d39f2ac8d",
+  "sdk_targets_version": "1.1.0",
+  "targets": [
+    {
+      "identity": {
+        "coordinates": "dev.omniwrap.boxfleet.hosted.control.plane.boxfleet.io.sdk:boxfleet-hosted-control-plane-boxfleet-io-sdk:0.3.0",
+        "ecosystem": "Maven",
+        "entry": "dev.omniwrap.boxfleet.hosted.control.plane.boxfleet.io.sdk.ApiClient",
+        "import": "import dev.omniwrap.boxfleet.hosted.control.plane.boxfleet.io.sdk.ApiClient"
+      },
+      "operations": {
+        "cancelJob": {
+          "member": "jobs.cancelJob",
+          "method": "POST",
+          "path": "/v1/jobs/{jobId}/cancel",
+          "resource": "jobs",
+          "signature": "suspend fun cancelJob(params: CancelJobParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "closeHostedWorkspace": {
+          "member": "workspaces.closeHostedWorkspace",
+          "method": "POST",
+          "path": "/v1/workspaces/{workspaceId}/close",
+          "resource": "workspaces",
+          "signature": "suspend fun closeHostedWorkspace(params: CloseHostedWorkspaceParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "closePersistentBox": {
+          "member": "organizations.closePersistentBox",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/close",
+          "resource": "organizations",
+          "signature": "suspend fun closePersistentBox(params: ClosePersistentBoxParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<HostedPersistentBoxClose>"
+        },
+        "controlUser": {
+          "member": "admin.controlUser",
+          "method": "POST",
+          "path": "/v1/admin/users",
+          "resource": "admin",
+          "signature": "suspend fun controlUser(params: ControlUserParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "createBillingPortal": {
+          "member": "organizations.createBillingPortal",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/billing/portal",
+          "resource": "organizations",
+          "signature": "suspend fun createBillingPortal(params: CreateBillingPortalParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "createBox": {
+          "member": "organizations.createBox",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/boxes",
+          "resource": "organizations",
+          "signature": "suspend fun createBox(params: CreateBoxParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "createCheckout": {
+          "member": "organizations.createCheckout",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/billing/checkout",
+          "resource": "organizations",
+          "signature": "suspend fun createCheckout(params: CreateCheckoutParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getAccountsConfig": {
+          "member": "accounts.getAccountsConfig",
+          "method": "GET",
+          "path": "/v1/accounts/config",
+          "resource": "accounts",
+          "signature": "suspend fun getAccountsConfig(params: GetAccountsConfigParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getAdminConsole": {
+          "member": "admin.getAdminConsole",
+          "method": "GET",
+          "path": "/v1/admin/console",
+          "resource": "admin",
+          "signature": "suspend fun getAdminConsole(params: GetAdminConsoleParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getAdminPlans": {
+          "member": "admin.getAdminPlans",
+          "method": "GET",
+          "path": "/v1/admin/plans",
+          "resource": "admin",
+          "signature": "suspend fun getAdminPlans(params: GetAdminPlansParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getAuthGate": {
+          "member": "auth.getAuthGate",
+          "method": "GET",
+          "path": "/v1/auth/gate",
+          "resource": "auth",
+          "signature": "suspend fun getAuthGate(params: GetAuthGateParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getBilling": {
+          "member": "organizations.getBilling",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/billing",
+          "resource": "organizations",
+          "signature": "suspend fun getBilling(params: GetBillingParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getBox": {
+          "member": "organizations.getBox",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/boxes/{boxId}",
+          "resource": "organizations",
+          "signature": "suspend fun getBox(params: GetBoxParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getEntitlements": {
+          "member": "organizations.getEntitlements",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/entitlements",
+          "resource": "organizations",
+          "signature": "suspend fun getEntitlements(params: GetEntitlementsParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getFleet": {
+          "member": "organizations.getFleet",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/fleet",
+          "resource": "organizations",
+          "signature": "suspend fun getFleet(params: GetFleetParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getFleetPolicy": {
+          "member": "organizations.getFleetPolicy",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/fleet/policy",
+          "resource": "organizations",
+          "signature": "suspend fun getFleetPolicy(params: GetFleetPolicyParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getHealth": {
+          "member": "health.getHealth",
+          "method": "GET",
+          "path": "/health",
+          "resource": "health",
+          "signature": "suspend fun getHealth(params: GetHealthParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getHostedWorkspace": {
+          "member": "workspaces.getHostedWorkspace",
+          "method": "GET",
+          "path": "/v1/workspaces/{workspaceId}",
+          "resource": "workspaces",
+          "signature": "suspend fun getHostedWorkspace(params: GetHostedWorkspaceParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getHostedWorkspaceOperation": {
+          "member": "workspaces.getHostedWorkspaceOperation",
+          "method": "GET",
+          "path": "/v1/workspaces/{workspaceId}/operations/{operationId}",
+          "resource": "workspaces",
+          "signature": "suspend fun getHostedWorkspaceOperation(params: GetHostedWorkspaceOperationParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getHostedWorkspaceSource": {
+          "member": "workspaces.getHostedWorkspaceSource",
+          "method": "GET",
+          "path": "/v1/workspaces/{workspaceId}/source",
+          "resource": "workspaces",
+          "signature": "suspend fun getHostedWorkspaceSource(params: GetHostedWorkspaceSourceParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getJob": {
+          "member": "jobs.getJob",
+          "method": "GET",
+          "path": "/v1/jobs/{jobId}",
+          "resource": "jobs",
+          "signature": "suspend fun getJob(params: GetJobParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "getPersistentBox": {
+          "member": "organizations.getPersistentBox",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}",
+          "resource": "organizations",
+          "signature": "suspend fun getPersistentBox(params: GetPersistentBoxParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Map<String, Any?>>"
+        },
+        "getPersistentBoxProviderUsage": {
+          "member": "organizations.getPersistentBoxProviderUsage",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/usage",
+          "resource": "organizations",
+          "signature": "suspend fun getPersistentBoxProviderUsage(params: GetPersistentBoxProviderUsageParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Map<String, Any?>>"
+        },
+        "getPlans": {
+          "member": "plans.getPlans",
+          "method": "GET",
+          "path": "/v1/plans",
+          "resource": "plans",
+          "signature": "suspend fun getPlans(params: GetPlansParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "ingestTelemetry": {
+          "member": "telemetry.ingestTelemetry",
+          "method": "POST",
+          "path": "/v1/telemetry/ingest",
+          "resource": "telemetry",
+          "signature": "suspend fun ingestTelemetry(params: IngestTelemetryParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "listBoxes": {
+          "member": "organizations.listBoxes",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/boxes",
+          "resource": "organizations",
+          "signature": "suspend fun listBoxes(params: ListBoxesParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "listHostedWorkspaces": {
+          "member": "workspaces.listHostedWorkspaces",
+          "method": "GET",
+          "path": "/v1/workspaces",
+          "resource": "workspaces",
+          "signature": "suspend fun listHostedWorkspaces(params: ListHostedWorkspacesParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "listInvoices": {
+          "member": "organizations.listInvoices",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/billing/invoices",
+          "resource": "organizations",
+          "signature": "suspend fun listInvoices(params: ListInvoicesParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "listJobEvents": {
+          "member": "jobs.listJobEvents",
+          "method": "GET",
+          "path": "/v1/jobs/{jobId}/events",
+          "resource": "jobs",
+          "signature": "suspend fun listJobEvents(params: ListJobEventsParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "listJobs": {
+          "member": "jobs.listJobs",
+          "method": "GET",
+          "path": "/v1/jobs",
+          "resource": "jobs",
+          "signature": "suspend fun listJobs(params: ListJobsParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "listMembers": {
+          "member": "organizations.listMembers",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/members",
+          "resource": "organizations",
+          "signature": "suspend fun listMembers(params: ListMembersParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "listObservedBoxes": {
+          "member": "organizations.listObservedBoxes",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/observed-boxes",
+          "resource": "organizations",
+          "signature": "suspend fun listObservedBoxes(params: ListObservedBoxesParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Map<String, Any?>>"
+        },
+        "listPersistentBoxOffers": {
+          "member": "organizations.listPersistentBoxOffers",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/offers",
+          "resource": "organizations",
+          "signature": "suspend fun listPersistentBoxOffers(params: ListPersistentBoxOffersParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Map<String, Any?>>"
+        },
+        "listPersistentBoxes": {
+          "member": "organizations.listPersistentBoxes",
+          "method": "GET",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes",
+          "resource": "organizations",
+          "signature": "suspend fun listPersistentBoxes(params: ListPersistentBoxesParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Map<String, Any?>>"
+        },
+        "listUsers": {
+          "member": "admin.listUsers",
+          "method": "GET",
+          "path": "/v1/admin/users",
+          "resource": "admin",
+          "signature": "suspend fun listUsers(params: ListUsersParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "listWaitlist": {
+          "member": "waitlist.listWaitlist",
+          "method": "GET",
+          "path": "/v1/waitlist",
+          "resource": "waitlist",
+          "signature": "suspend fun listWaitlist(params: ListWaitlistParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "openHostedWorkspace": {
+          "member": "workspaces.openHostedWorkspace",
+          "method": "POST",
+          "path": "/v1/workspaces",
+          "resource": "workspaces",
+          "signature": "suspend fun openHostedWorkspace(params: OpenHostedWorkspaceParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "provisionPersistentBox": {
+          "member": "organizations.provisionPersistentBox",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes",
+          "resource": "organizations",
+          "signature": "suspend fun provisionPersistentBox(params: ProvisionPersistentBoxParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "putFleetPolicy": {
+          "member": "organizations.putFleetPolicy",
+          "method": "PUT",
+          "path": "/v1/organizations/{organizationId}/fleet/policy",
+          "resource": "organizations",
+          "signature": "suspend fun putFleetPolicy(params: PutFleetPolicyParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "readTelemetry": {
+          "member": "admin.readTelemetry",
+          "method": "GET",
+          "path": "/v1/admin/telemetry",
+          "resource": "admin",
+          "signature": "suspend fun readTelemetry(params: ReadTelemetryParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "reconcilePersistentBox": {
+          "member": "organizations.reconcilePersistentBox",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/reconcile",
+          "resource": "organizations",
+          "signature": "suspend fun reconcilePersistentBox(params: ReconcilePersistentBoxParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Map<String, Any?>>"
+        },
+        "recoverHostedWorkspace": {
+          "member": "workspaces.recoverHostedWorkspace",
+          "method": "POST",
+          "path": "/v1/workspaces/{workspaceId}/recover",
+          "resource": "workspaces",
+          "signature": "suspend fun recoverHostedWorkspace(params: RecoverHostedWorkspaceParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "register": {
+          "member": "auth.register",
+          "method": "POST",
+          "path": "/v1/auth/register",
+          "resource": "auth",
+          "signature": "suspend fun register(params: RegisterParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "removeMember": {
+          "member": "organizations.removeMember",
+          "method": "DELETE",
+          "path": "/v1/organizations/{organizationId}/members/{userId}",
+          "resource": "organizations",
+          "signature": "suspend fun removeMember(params: RemoveMemberParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "requestAccess": {
+          "member": "waitlist.requestAccess",
+          "method": "POST",
+          "path": "/v1/waitlist",
+          "resource": "waitlist",
+          "signature": "suspend fun requestAccess(params: RequestAccessParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "runHostedWorkspace": {
+          "member": "workspaces.runHostedWorkspace",
+          "method": "POST",
+          "path": "/v1/workspaces/{workspaceId}/run",
+          "resource": "workspaces",
+          "signature": "suspend fun runHostedWorkspace(params: RunHostedWorkspaceParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "startPersistentBox": {
+          "member": "organizations.startPersistentBox",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/start",
+          "resource": "organizations",
+          "signature": "suspend fun startPersistentBox(params: StartPersistentBoxParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Map<String, Any?>>"
+        },
+        "stopBox": {
+          "member": "organizations.stopBox",
+          "method": "DELETE",
+          "path": "/v1/organizations/{organizationId}/boxes/{boxId}",
+          "resource": "organizations",
+          "signature": "suspend fun stopBox(params: StopBoxParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "stopPersistentBox": {
+          "member": "organizations.stopPersistentBox",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/persistent-boxes/{boxId}/stop",
+          "resource": "organizations",
+          "signature": "suspend fun stopPersistentBox(params: StopPersistentBoxParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Map<String, Any?>>"
+        },
+        "stripeWebhook": {
+          "member": "billing.stripeWebhook",
+          "method": "POST",
+          "path": "/v1/billing/stripe/webhook",
+          "resource": "billing",
+          "signature": "suspend fun stripeWebhook(params: StripeWebhookParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "submitJob": {
+          "member": "jobs.submitJob",
+          "method": "POST",
+          "path": "/v1/jobs",
+          "resource": "jobs",
+          "signature": "suspend fun submitJob(params: SubmitJobParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "syncObservedBoxes": {
+          "member": "organizations.syncObservedBoxes",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/observed-boxes/sync",
+          "resource": "organizations",
+          "signature": "suspend fun syncObservedBoxes(params: SyncObservedBoxesParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Map<String, Any?>>"
+        },
+        "updateAuthGate": {
+          "member": "auth.updateAuthGate",
+          "method": "PUT",
+          "path": "/v1/auth/gate",
+          "resource": "auth",
+          "signature": "suspend fun updateAuthGate(params: UpdateAuthGateParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "updatePlan": {
+          "member": "admin.updatePlan",
+          "method": "POST",
+          "path": "/v1/admin/plans",
+          "resource": "admin",
+          "signature": "suspend fun updatePlan(params: UpdatePlanParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "upsertMember": {
+          "member": "organizations.upsertMember",
+          "method": "POST",
+          "path": "/v1/organizations/{organizationId}/members",
+          "resource": "organizations",
+          "signature": "suspend fun upsertMember(params: UpsertMemberParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        },
+        "verifyLicense": {
+          "member": "auth.verifyLicense",
+          "method": "POST",
+          "path": "/v1/auth/verify",
+          "resource": "auth",
+          "signature": "suspend fun verifyLicense(params: VerifyLicenseParams, requestOptions: RequestOptions = RequestOptions()): ApiResult<Unit>"
+        }
+      },
+      "package_directory": "../BoxFleetHostedControlPlaneBoxfleetIoSdk",
+      "package_manifest": "build.gradle.kts",
+      "reference": "api.md",
+      "renderer": "kotlin"
+    }
+  ]
+}
